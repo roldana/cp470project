@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="payment_freq">
+        <item>Accelerated Weekly</item>
+        <item>Weekly</item>
+        <item>Accelerated Bi-weekly</item>
+        <item>Bi-Weekly (every 2 weeks)</item>
+        <item>Semi-monthly (24x per year)</item>
+        <item>Monthly (12x per year)</item>
+    </string-array>
+</resources>

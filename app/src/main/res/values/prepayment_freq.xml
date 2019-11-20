@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="prepayment_freq">
+        <item>One time</item>
+        <item>Each year</item>
+        <item>Same as regular payment</item>
+    </string-array>
+</resources>
