@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -23,46 +25,50 @@ public class MainActivity extends AppCompatActivity {
         final EditText prepayAmountTxt = findViewById(R.id.prepay_amount);
         final EditText startWithTxt = findViewById(R.id.start_with);
 
-        String mortgageAmount = mortgageAmountTxt.getText().toString();
-        String interestRate = interestRateTxt.getText().toString();
-        String prepayAmount = prepayAmountTxt.getText().toString();
-        String startWith = startWithTxt.getText().toString();
-
         final Spinner amortizationYrs = findViewById(R.id.amortization_years);
         final Spinner amortizationMonths = findViewById(R.id.amortization_months);
         final Spinner paymentFreq = findViewById(R.id.payment_freq);
         final Spinner termYrs = findViewById(R.id.term_years);
         final Spinner prepayFreq = findViewById(R.id.prepay_freq);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        final Button calcBtn = findViewById(R.id.calculateBtn);
+
+        ArrayAdapter<CharSequence> adapter;
+        //set dropdown menu for the amortization period (years)
+        adapter = ArrayAdapter.createFromResource(this,
                 R.array.amortization_periods_yrs, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         amortizationYrs.setAdapter(adapter);
 
+        //set dropdown menu for the amortization period (months)
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.amortization_periods_months, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         amortizationMonths.setAdapter(adapter);
 
-        adapter = ArrayAdapter.createFromResource(this,
-                R.array.amortization_periods_yrs, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        amortizationYrs.setAdapter(adapter);
-
+        //set dropdown menu for the payment frequency
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.payment_freq, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         paymentFreq.setAdapter(adapter);
 
+        //set dropdown menu for the term length (years)
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.term_yrs, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         termYrs.setAdapter(adapter);
 
+        //set dropdown menu for the prepayment frequency
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.prepayment_freq, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         prepayFreq.setAdapter(adapter);
+
+        calcBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // calculate button pressed
+            }
+        });
 
     }
 
