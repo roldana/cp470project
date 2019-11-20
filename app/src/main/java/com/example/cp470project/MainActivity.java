@@ -14,26 +14,37 @@ public class MainActivity extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME =  "MainActivity";
 
+    EditText mortgageAmountTxt;
+    EditText interestRateTxt;
+    EditText prepayAmountTxt;
+    EditText startWithTxt;
+    Spinner amortizationYrs;
+    Spinner amortizationMonths;
+    Spinner paymentFreq;
+    Spinner termYrs;
+    Spinner prepayFreq;
+    Button calcBtn;
+
+    ArrayAdapter<CharSequence> adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i(ACTIVITY_NAME, "In onCreate()");
-        final EditText mortgageAmountTxt = findViewById(R.id.mortgage_amount);
-        final EditText interestRateTxt = findViewById(R.id.interest_rate);
-        final EditText prepayAmountTxt = findViewById(R.id.prepay_amount);
-        final EditText startWithTxt = findViewById(R.id.start_with);
+        mortgageAmountTxt = findViewById(R.id.mortgage_amount);
+        interestRateTxt = findViewById(R.id.interest_rate);
+        prepayAmountTxt = findViewById(R.id.prepay_amount);
+        startWithTxt = findViewById(R.id.start_with);
 
-        final Spinner amortizationYrs = findViewById(R.id.amortization_years);
-        final Spinner amortizationMonths = findViewById(R.id.amortization_months);
-        final Spinner paymentFreq = findViewById(R.id.payment_freq);
-        final Spinner termYrs = findViewById(R.id.term_years);
-        final Spinner prepayFreq = findViewById(R.id.prepay_freq);
+        amortizationYrs = findViewById(R.id.amortization_years);
+        amortizationMonths = findViewById(R.id.amortization_months);
+        paymentFreq = findViewById(R.id.payment_freq);
+        termYrs = findViewById(R.id.term_years);
+        prepayFreq = findViewById(R.id.prepay_freq);
+        calcBtn = findViewById(R.id.calculateBtn);
 
-        final Button calcBtn = findViewById(R.id.calculateBtn);
-
-        ArrayAdapter<CharSequence> adapter;
         //set dropdown menu for the amortization period (years)
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.amortization_periods_yrs, android.R.layout.simple_spinner_item);
