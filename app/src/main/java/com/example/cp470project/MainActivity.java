@@ -2,6 +2,7 @@ package com.example.cp470project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -78,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
         calcBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // calculate button pressed
+                Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
+                startActivity(intent);
+
             }
         });
 
