@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SummaryActivity"
+    android:stretchColumns="1">
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:layout_height="100dp"
+            android:text="Category"
+            android:padding="30dip"/>
+        <TextView
+            android:text="Term"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+        <TextView
+            android:text="Amort. Period"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:layout_height="100dp"
+            android:text="Num of Payments"
+            android:padding="30dip"/>
+        <TextView
+            android:text="60"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+        <TextView
+            android:text="300"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:layout_height="100dp"
+            android:text="Mortgage Payment"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$581.00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$581.00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:layout_height="100dp"
+            android:text="Prepayment"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$0.00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$0.00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:layout_height="100dp"
+            android:text="Principle Payments"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$11500.00 "
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$100000.00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:layout_height="100dp"
+            android:text="Interest Payments"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$23403.00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$74481.50"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_column="1"
+            android:layout_height="100dp"
+            android:text="Total Cost"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$34903.00"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+        <TextView
+            android:text="$174481.50"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:padding="30dip"/>
+    </TableRow>
+
+</TableLayout>
