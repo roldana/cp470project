@@ -1,9 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultsActivity">
+
+    <TextView
+        android:id="@+id/calcSummaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculation Summary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/calculationsTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcSummaryText"
+        tools:context=".ResultsActivity">
+
+        <TableRow>
+
+            <TextView
+                android:text="Category"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="Term"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="Amort. Period"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Num of Payments" />
+
+            <TextView android:text="60" />
+
+            <TextView android:text="300" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Mortgage Payment" />
+
+            <TextView android:text="$581.00" />
+
+            <TextView android:text="$581.00" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Prepayment" />
+
+            <TextView android:text="$0.00" />
+
+            <TextView android:text="$0.00" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Principle Payments" />
+
+            <TextView android:text="$11500.00 " />
+
+            <TextView android:text="$100000.00" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Interest Payments" />
+
+            <TextView android:text="$23403.00" />
+
+            <TextView android:text="$74481.50" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="Total Cost" />
+
+            <TextView android:text="$34903.00" />
+
+            <TextView android:text="$174481.50" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/mortgageSummaryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Mortgage Summary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculationsTableLayout" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Over the 25-year amortization period, you will:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mortgageSummaryText" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="have made 300 monthly (12x per year) payments of $581.60. have paid $100,000.00 in principal, $74,481.50 in interest, for a total of $174,481.50."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Over the 5-year term, you will:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView56" />
+
+    <TextView
+        android:id="@+id/textView58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="have made 60 monthly (12x per year) payments of $581.60. have paid $11,492.50 in principal, $23,403.80 in interest, for a total of $34,896.30."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="At the end of your 5-year term, you will:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView58" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="have a balance of $88,507.50."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView59" />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Payment Diagram"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[GRAPHS]"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView61" />
+
+    <Button
+        android:id="@+id/summaryReportBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Go to Summary Report"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView63" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="A Summary Report can be produced based on values you entered into the calculator. This report includes all your data, calculation results and payment schedule (by year and by period)."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView62" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
