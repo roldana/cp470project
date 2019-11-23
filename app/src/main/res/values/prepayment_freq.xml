@@ -5,4 +5,10 @@
         <item>Each year</item>
         <item>Same as regular payment</item>
     </string-array>
+
+    <string-array name="prepayment_freq_values">
+        <item>once</item>
+        <item>each_yr</item>
+        <item>same_regular</item>
+    </string-array>
 </resources>

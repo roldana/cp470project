@@ -7,110 +7,112 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/mortgage_amt_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Mortgage Amount"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/payment_plan_txt" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/interest_rate_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Interest Rate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mortgage_amount" />
+        app:layout_constraintTop_toBottomOf="@+id/mortgage_amount_etext" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/amort_period_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Amortization Period"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/interest_rate" />
+        app:layout_constraintTop_toBottomOf="@+id/interest_rate_etext" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/term_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Term"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payment_freq" />
+        app:layout_constraintTop_toBottomOf="@+id/payment_freq_spinner" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/payment_freq_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Payment Frequency"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amortization_months" />
+        app:layout_constraintTop_toBottomOf="@+id/amortization_months_spinner" />
 
     <EditText
-        android:id="@+id/mortgage_amount"
+        android:id="@+id/mortgage_amount_etext"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="100,000"
         android:inputType="number|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/mortgage_amt_txt" />
 
     <EditText
-        android:id="@+id/interest_rate"
+        android:id="@+id/interest_rate_etext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="5.00"
         android:inputType="number|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/interest_rate_txt" />
 
     <Spinner
-        android:id="@+id/amortization_years"
+        android:id="@+id/amortization_years_spinner"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/interest_rate"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/interest_rate_etext"
+        app:layout_constraintTop_toBottomOf="@+id/amort_period_txt" />
 
     <Spinner
-        android:id="@+id/amortization_months"
+        android:id="@+id/amortization_months_spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/amortization_years"
-        app:layout_constraintTop_toBottomOf="@+id/amortization_years" />
+        app:layout_constraintStart_toStartOf="@+id/amortization_years_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/amortization_years_spinner" />
 
     <Spinner
-        android:id="@+id/payment_freq"
+        android:id="@+id/payment_freq_spinner"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/payment_freq_txt" />
 
     <Spinner
-        android:id="@+id/term_years"
+        android:id="@+id/term_years_spinner"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/payment_freq"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintStart_toStartOf="@+id/payment_freq_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/term_txt" />
 
     <TextView
-        android:id="@+id/mortgageSummaryText"
+        android:id="@+id/prepayment_plan_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="Prepayment Plan"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/term_years" />
+        app:layout_constraintTop_toBottomOf="@+id/term_years_spinner" />
 
     <TextView
-        android:id="@+id/calcSummaryText"
+        android:id="@+id/payment_plan_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Payment Plan"
@@ -120,65 +122,65 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/prepayment_amount_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prepayment Amount"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/prepayment_plan_txt" />
 
     <EditText
-        android:id="@+id/prepay_amount"
+        android:id="@+id/prepay_amount_etext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="0.00"
         android:inputType="number|numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/prepayment_amount_txt" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/prepay_freq_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prepayment Frequency"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prepay_amount" />
+        app:layout_constraintTop_toBottomOf="@+id/prepay_amount_etext" />
 
     <Spinner
-        android:id="@+id/prepay_freq"
+        android:id="@+id/prepay_freq_spinner"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/prepay_freq_txt" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/startwith_pay_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start with payment"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prepay_freq" />
+        app:layout_constraintTop_toBottomOf="@+id/prepay_freq_spinner" />
 
     <EditText
-        android:id="@+id/start_with"
+        android:id="@+id/start_with_etext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="1"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/startwith_pay_txt" />
 
     <Button
-        android:id="@+id/calculateBtn"
+        android:id="@+id/calculate_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_with" />
+        app:layout_constraintTop_toBottomOf="@+id/start_with_etext" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
