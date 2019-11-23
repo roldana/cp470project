@@ -11,7 +11,6 @@
         android:id="@+id/calcSummaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="Calculation Summary"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,24 +20,25 @@
         android:id="@+id/calculationsTableLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="1"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calcSummaryText"
-        tools:context=".ResultsActivity"
-        tools:layout_editor_absoluteX="0dp">
+        tools:context=".ResultsActivity">
 
         <TableRow>
 
             <TextView
-
-                android:text="Category" />
-
-            <TextView
-
-                android:text="Term" />
+                android:text="Category"
+                android:textStyle="bold" />
 
             <TextView
+                android:text="Term"
+                android:textStyle="bold" />
 
-                android:text="Amort. Period" />
+            <TextView
+                android:text="Amort. Period"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow>
@@ -101,7 +101,7 @@
         android:id="@+id/mortgageSummaryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Mortgage Summary"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
