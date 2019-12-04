@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // calculate button pressed
                 if (getInputs()) {
-                    Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
+                    Intent intent = new Intent(MainActivity.this, SummaryActivity.class);
                     intent.putExtra("MORTGAGE_AMOUNT", mortgageAmount);
                     intent.putExtra("INTEREST_RATE", interestRate);
                     intent.putExtra("AMORTIZATION_PERIOD_YRS", amortizationPeriodY);

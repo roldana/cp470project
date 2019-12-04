@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="amortization_periods_months">
+    <string-array name="amortization_periods_months" id = "@id+/amortization_periods_months">
         <item>1 Month</item>
         <item>2 Months</item>
         <item>3 Months</item>
@@ -14,7 +14,7 @@
         <item>11 Months</item>
     </string-array>
 
-    <string-array name="amortization_periods_months_values">
+    <string-array name="amortization_periods_months_values" id = "@id+/amortization_periods_months_values">
         <item>1</item>
         <item>2</item>
         <item>3</item>

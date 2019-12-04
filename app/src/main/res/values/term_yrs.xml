@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="term_yrs">
+    <string-array name="term_yrs" id = "@id+/term_yrs">
         <item>1 Year</item>
         <item>2 Years</item>
         <item>3 Years</item>
@@ -13,7 +13,7 @@
         <item>10 Years</item>
     </string-array>
 
-    <string-array name="term_yrs_values">
+    <string-array name="term_yrs_values" id = "@id+/term_yrs_values">
         <item>1</item>
         <item>2</item>
         <item>3</item>

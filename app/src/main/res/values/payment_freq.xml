@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="payment_freq">
+    <string-array name="payment_freq" id = "@id+/payment_freq">
         <item>Accelerated Weekly</item>
         <item>Weekly</item>
         <item>Accelerated Bi-weekly</item>
@@ -9,7 +9,7 @@
         <item>Monthly (12x per year)</item>
     </string-array>
 
-    <string-array name="payment_freq_values">
+    <string-array name="payment_freq_values" id = "@id+/payment_freq_values">
         <item>a_weekly</item>
         <item>weekly</item>
         <item>a_bi_weekly</item>
