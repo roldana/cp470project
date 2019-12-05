@@ -3,6 +3,7 @@ package com.example.cp470project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TableLayout;
@@ -13,22 +14,33 @@ public class SummaryActivity extends AppCompatActivity {
 
     private TableLayout mTableLayout;
 
+    double principal;          //loan amount
+    double paymentFormula;
+    double interestRate;                  //initializes value for interestRate
+    double monthlyPayment;                   //initializes value for monthlyPayment
+    double monthlyPrincipal;
+    double monthlyInterest;                   //initialize value for monthlyInterest
+    int term;
+    double loanBalance = principal;                //initialize value for loanBalance
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
 
-        //initialize variables
-        double principal = Double.parseDouble(((EditText) findViewById(R.id.mortgage_amount_etext)).getText().toString());                   //loan amount
-        double paymentFormula;
-        double interestRate = Double.parseDouble(((EditText) findViewById(R.id.interest_rate_etext)).getText().toString());                    //initializes value for interestRate
-        double monthlyPayment;                   //initializes value for monthlyPayment
-        double monthlyPrincipal;
-        double monthlyInterest;                   //initialize value for monthlyInterest
-        int term = Integer.parseInt((findViewById(R.id.term_years_spinner)).toString());                            //initialize value for term
-        double loanBalance = principal;                //initialize value for loanBalance
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            principal = extras.getDouble("MORTGAGE_AMOUNT");
+            interestRate = extras.getDouble("INTEREST_RATE");
+            term = extras.getInt("TERM");
+        } else {
+            principal = (Double) savedInstanceState.getSerializable("MORTGAGE_AMOUNT");
+            interestRate = (Double) savedInstanceState.getSerializable("INTEREST_RATE");
+            term = (Integer) savedInstanceState.getSerializable("TERM");
+        }
 
-        mTableLayout = (TableLayout) findViewById(R.id.table_layout);
+
+        mTableLayout = findViewById(R.id.table_layout);
         mTableLayout.setStretchAllColumns(true);
 
         TextView text_Spacer = null;
@@ -67,7 +79,6 @@ public class SummaryActivity extends AppCompatActivity {
         tr.addView(loan_bal);
 
 
-
         for(int i = 0; i < term; i++){
             //formula to calculate paymentFormula
             paymentFormula = (Math.pow((1 + interestRate), term) -1)/
@@ -98,11 +109,29 @@ public class SummaryActivity extends AppCompatActivity {
 
             tr.setId(i + 1);
 
-
+            if (period.getParent() != null) {
+                ((ViewGroup)period.getParent()).removeView(period);
+            }
             tr.addView(period);
+
+            if (principle_payment.getParent() != null) {
+                ((ViewGroup)principle_payment.getParent()).removeView(principle_payment);
+            }
             tr.addView(principle_payment);
+
+            if (int_payment.getParent() != null) {
+                ((ViewGroup)int_payment.getParent()).removeView(int_payment);
+            }
             tr.addView(int_payment);
+
+            if (tot_payment.getParent() != null) {
+                ((ViewGroup)tot_payment.getParent()).removeView(tot_payment);
+            }
             tr.addView(tot_payment);
+
+            if (loan_bal.getParent() != null) {
+                ((ViewGroup)loan_bal.getParent()).removeView(loan_bal);
+            }
             tr.addView(loan_bal);
         }
     }

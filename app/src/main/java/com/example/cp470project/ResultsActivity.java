@@ -59,6 +59,9 @@ public class ResultsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // calculate button pressed
                 Intent intent = new Intent(ResultsActivity.this, SummaryActivity.class);
+                intent.putExtra("MORTGAGE_AMOUNT", mortgageAmount);
+                intent.putExtra("INTEREST_RATE", interestRate);
+                intent.putExtra("TERM", termYrs);
                 startActivity(intent);
             }
         });
