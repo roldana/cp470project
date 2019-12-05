@@ -19,6 +19,46 @@
             android:id="@+id/table_layout">
 
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/periodCell"
+                    android:text="Period"
+                    android:layout_width="wrap_content"
+                    android:layout_column="0"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/principalCell"
+                    android:text="Principal Payment"
+                    android:layout_width="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/interestCell"
+                    android:text="Interest Payment"
+                    android:layout_width="wrap_content"
+                    android:layout_column="2"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/totalCell"
+                    android:text="Total Payment"
+                    android:layout_width="wrap_content"
+                    android:layout_column="3"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/endingCell"
+                    android:text="Ending Balance"
+                    android:layout_width="wrap_content"
+                    android:layout_column="4"
+                    android:layout_weight="1" />
+
+            </TableRow>
         </TableLayout>
 
     </ScrollView>
