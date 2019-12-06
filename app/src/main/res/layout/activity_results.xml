@@ -45,54 +45,78 @@
 
             <TextView android:text="Num of Payments" />
 
-            <TextView android:text="60" />
+            <TextView
+                android:id="@+id/num_pay_term"
+                android:text="60" />
 
-            <TextView android:text="300" />
+            <TextView
+                android:id="@+id/num_pay_period"
+                android:text="300" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="Mortgage Payment" />
 
-            <TextView android:text="$581.00" />
+            <TextView
+                android:id="@+id/monthly_payment_term"
+                android:text="$581.00" />
 
-            <TextView android:text="$581.00" />
+            <TextView
+                android:id="@+id/monthly_payment_period"
+                android:text="$581.00" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="Prepayment" />
 
-            <TextView android:text="$0.00" />
+            <TextView
+                android:id="@+id/prepay_term"
+                android:text="$0.00" />
 
-            <TextView android:text="$0.00" />
+            <TextView
+                android:id="@+id/prepay_period"
+                android:text="$0.00" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="Principle Payments" />
 
-            <TextView android:text="$11500.00 " />
+            <TextView
+                android:id="@+id/principle_payments_term"
+                android:text="$11500.00 " />
 
-            <TextView android:text="$100000.00" />
+            <TextView
+                android:id="@+id/principle_payments_period"
+                android:text="$100000.00" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="Interest Payments" />
 
-            <TextView android:text="$23403.00" />
+            <TextView
+                android:id="@+id/interest_payments_term"
+                android:text="$23403.00" />
 
-            <TextView android:text="$74481.50" />
+            <TextView
+                android:id="@+id/interest_payments_period"
+                android:text="$74481.50" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="Total Cost" />
 
-            <TextView android:text="$34903.00" />
+            <TextView
+                android:id="@+id/total_term"
+                android:text="$34903.00" />
 
-            <TextView android:text="$174481.50" />
+            <TextView
+                android:id="@+id/total_period"
+                android:text="$174481.50" />
         </TableRow>
 
     </TableLayout>
@@ -108,54 +132,57 @@
         app:layout_constraintTop_toBottomOf="@+id/calculations_table_layout" />
 
     <TextView
-        android:id="@+id/textView55"
+        android:id="@+id/mortgage_summary_txt0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=" Over the 25-year amortization period, you will:"
+        android:text="Over the 25-year amortization period, you will:"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt" />
 
     <TextView
-        android:id="@+id/textView56"
+        android:id="@+id/mortgage_summary_txt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="have made 300 monthly (12x per year) payments of $581.60. have paid $100,000.00 in principal, $74,481.50 in interest, for a total of $174,481.50."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView55" />
+        app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt0" />
 
     <TextView
-        android:id="@+id/textView57"
+        android:id="@+id/mortgage_summary_txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Over the 5-year term, you will:"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView56" />
+        app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt1" />
 
     <TextView
-        android:id="@+id/textView58"
+        android:id="@+id/mortgage_summary_txt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="have made 60 monthly (12x per year) payments of $581.60. have paid $11,492.50 in principal, $23,403.80 in interest, for a total of $34,896.30."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView57" />
+        app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt2" />
 
     <TextView
-        android:id="@+id/textView59"
+        android:id="@+id/mortgage_summary_txt4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="At the end of your 5-year term, you will:"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView58" />
+        app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt3" />
 
     <TextView
-        android:id="@+id/textView60"
+        android:id="@+id/mortgage_summary_txt5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="have a balance of $88,507.50."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView59" />
+        app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt4" />
 
     <TextView
         android:id="@+id/textView61"
@@ -165,7 +192,7 @@
         android:text="Payment Diagram"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+        app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt5" />
 
     <TextView
         android:id="@+id/textView62"
