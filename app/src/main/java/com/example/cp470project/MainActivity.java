@@ -26,10 +26,8 @@ public class MainActivity extends AppCompatActivity {
     EditText prepayAmountTxt;
     EditText startWithTxt;
     Spinner amortizationYrs;
-    Spinner amortizationMonths;
     Spinner paymentFreqSpn;
     Spinner termYrsSpn;
-    Spinner prepayFreqSpn;
     Button calcBtn;
 
     ArrayAdapter<CharSequence> adapter;
@@ -37,11 +35,9 @@ public class MainActivity extends AppCompatActivity {
     Double mortgageAmount;
     Double interestRate;
     Integer amortizationPeriodY;
-    Integer amortizationPeriodM;
     String paymentFreq;
     Integer termYrs;
     Double prepaymentAmount;
-    String prepaymentFreq;
     Integer startWithPayment;
 
 
@@ -56,10 +52,8 @@ public class MainActivity extends AppCompatActivity {
         startWithTxt = findViewById(R.id.start_with_etext);
 
         amortizationYrs = findViewById(R.id.amortization_years_spinner);
-        amortizationMonths = findViewById(R.id.amortization_months_spinner);
         paymentFreqSpn = findViewById(R.id.payment_freq_spinner);
         termYrsSpn = findViewById(R.id.term_years_spinner);
-        prepayFreqSpn = findViewById(R.id.prepay_freq_spinner);
         calcBtn = findViewById(R.id.calculate_btn);
 
         dbHelper = new Database(this);
@@ -70,30 +64,21 @@ public class MainActivity extends AppCompatActivity {
                 R.array.amortization_periods_yrs, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         amortizationYrs.setAdapter(adapter);
-
-        //set dropdown menu for the amortization period (months)
-        adapter = ArrayAdapter.createFromResource(this,
-                R.array.amortization_periods_months, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        amortizationMonths.setAdapter(adapter);
+        amortizationYrs.setSelection(24);
 
         //set dropdown menu for the payment frequency
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.payment_freq, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         paymentFreqSpn.setAdapter(adapter);
+        paymentFreqSpn.setSelection(5);
 
         //set dropdown menu for the term length (years)
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.term_yrs, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         termYrsSpn.setAdapter(adapter);
-
-        //set dropdown menu for the prepayment frequency
-        adapter = ArrayAdapter.createFromResource(this,
-                R.array.prepayment_freq, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        prepayFreqSpn.setAdapter(adapter);;
+        termYrsSpn.setSelection(4);
 
         calcBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -103,11 +88,9 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("MORTGAGE_AMOUNT", mortgageAmount);
                     intent.putExtra("INTEREST_RATE", interestRate);
                     intent.putExtra("AMORTIZATION_PERIOD_YRS", amortizationPeriodY);
-                    intent.putExtra("AMORTIZATION_PERIOD_MONTHS", amortizationPeriodM);
                     intent.putExtra("PAYMENT_FREQUENCY", paymentFreq);
                     intent.putExtra("TERM", termYrs);
                     intent.putExtra("PREPAYMENT_AMOUNT", prepaymentAmount);
-                    intent.putExtra("PREPAYMENT_FREQ", prepaymentFreq);
                     intent.putExtra("START_WITH", startWithPayment);
                     ContentValues cValues = new ContentValues();
                     cValues.put(dbHelper.Morgage_AMT, mortgageAmount);
@@ -150,11 +133,6 @@ public class MainActivity extends AppCompatActivity {
         String[] amortizationYValues = getResources().getStringArray(R.array.amortization_periods_yrs_values);
         amortizationPeriodY = Integer.valueOf(amortizationYValues[amortYPos]);
 
-        //get amortization period months
-        Integer amortMPos = amortizationMonths.getSelectedItemPosition();
-        String[] amortizationMValues = getResources().getStringArray(R.array.amortization_periods_months_values);
-        amortizationPeriodM = Integer.valueOf(amortizationMValues[amortMPos]);
-
         //payment freq
         Integer payFreqPos = paymentFreqSpn.getSelectedItemPosition();
         String[] payFreqValues = getResources().getStringArray(R.array.payment_freq_values);
@@ -164,11 +142,6 @@ public class MainActivity extends AppCompatActivity {
         Integer termPos = termYrsSpn.getSelectedItemPosition();
         String[] termYrsValues = getResources().getStringArray(R.array.term_yrs_values);
         termYrs = Integer.valueOf(termYrsValues[termPos]);
-
-        //prepayment freq
-        Integer prepayFreqPos = prepayFreqSpn.getSelectedItemPosition();
-        String[] prepayFreqValues = getResources().getStringArray(R.array.prepayment_freq_values);
-        prepaymentFreq = prepayFreqValues[prepayFreqPos];
 
         //interest rate
         String interestRateInput = interestRateTxt.getText().toString();
@@ -199,10 +172,6 @@ public class MainActivity extends AppCompatActivity {
                 e1.printStackTrace();
             }
         } else { startWithPayment = 1; }
-
-        //
-//        valid = true;
-        //
 
         return valid;
     }
