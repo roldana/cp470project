@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -101,6 +102,11 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("PREPAYMENT_FREQ", prepaymentFreq);
                     intent.putExtra("START_WITH", startWithPayment);
                     startActivity(intent);
+                } else {
+                    CharSequence text = "Please check inputs";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(getApplicationContext(), text, duration);
+                    toast.show();
                 }
             }
         });
@@ -179,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
         } else { startWithPayment = 1; }
 
         //
-        valid = true;
+//        valid = true;
         //
 
         return valid;
