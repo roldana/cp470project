@@ -2,7 +2,9 @@ package com.example.cp470project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,6 +17,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME =  "MainActivity";
+    private Database dbHelper = new Database(this);
+    private SQLiteDatabase database;
+
 
     EditText mortgageAmountTxt;
     EditText interestRateTxt;
@@ -57,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
         prepayFreqSpn = findViewById(R.id.prepay_freq_spinner);
         calcBtn = findViewById(R.id.calculate_btn);
 
+        dbHelper = new Database(this);
+        database = dbHelper.getWritableDatabase();
+
         //set dropdown menu for the amortization period (years)
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.amortization_periods_yrs, android.R.layout.simple_spinner_item);
@@ -85,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.prepayment_freq, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        prepayFreqSpn.setAdapter(adapter);
+        prepayFreqSpn.setAdapter(adapter);;
 
         calcBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -101,6 +109,14 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("PREPAYMENT_AMOUNT", prepaymentAmount);
                     intent.putExtra("PREPAYMENT_FREQ", prepaymentFreq);
                     intent.putExtra("START_WITH", startWithPayment);
+                    ContentValues cValues = new ContentValues();
+                    cValues.put(dbHelper.Morgage_AMT, mortgageAmount);
+                    cValues.put(dbHelper.Interest_Rate, interestRate);
+                    cValues.put(dbHelper.Amortization_Period_Years, amortizationPeriodY);
+                    cValues.put(dbHelper.Term, termYrs);
+                    cValues.put(dbHelper.Prepayment_Amt, prepaymentAmount);
+                    cValues.put(dbHelper.Starting_Payment, startWithPayment);
+                    database.insert(dbHelper.TABLE_NAME, null, cValues);
                     startActivity(intent);
                 } else {
                     CharSequence text = "Please check inputs";
@@ -209,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
     }
     protected void onDestroy() {
         super.onDestroy();
+        database.close(); // close database
         Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
 }
