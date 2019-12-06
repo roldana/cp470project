@@ -8,7 +8,7 @@ import android.util.Log;
 public class Database extends SQLiteOpenHelper {
     public static final int DB_VERSION = 1;
     public static final String DB_NAME = "inputDB.db";
-    public static final String COLUMN_ID = "id"; //not needed?
+    public static final String KEY_ID = "INPUTID"; //not needed?
     protected static final String TABLE_NAME = "INPUT_TABLE";
     public static final String Morgage_AMT = "MortgageAmount";
     public static final String Interest_Rate = "InterestRate";
@@ -17,7 +17,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String Prepayment_Amt = "PrepaymentAmount";
     public static final String Starting_Payment = "StartingPayment";
 
-    private static final String DATABASE_CREATE = "create table " + DB_NAME + "(" + COLUMN_ID +
+    private static final String DATABASE_CREATE = "create table " + TABLE_NAME + "(" + KEY_ID +
             " integer primary key autoincrement, "+ Morgage_AMT + " double not null, " + Interest_Rate +
             " double not null, " + Amortization_Period_Years + " integer not null, " + Term + " integer not null, " +
             Prepayment_Amt + " double not null, " + Starting_Payment + " double not null);";
