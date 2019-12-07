@@ -25,35 +25,35 @@
 
                 <TextView
                     android:id="@+id/periodCell"
-                    android:text="Period"
+                    android:text="@string/periodActResult"
                     android:layout_width="wrap_content"
                     android:layout_column="0"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/principalCell"
-                    android:text="Principal Payment"
+                    android:text="@string/principalPaymentActResult"
                     android:layout_width="wrap_content"
                     android:layout_column="1"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/interestCell"
-                    android:text="Interest Payment"
+                    android:text="@string/interestPaymentActResult"
                     android:layout_width="wrap_content"
                     android:layout_column="2"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/totalCell"
-                    android:text="Total Payment"
+                    android:text="@string/totalPaymentActResult"
                     android:layout_width="wrap_content"
                     android:layout_column="3"
                     android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/endingCell"
-                    android:text="Ending Balance"
+                    android:text="@string/endingBalActResult"
                     android:layout_width="wrap_content"
                     android:layout_column="4"
                     android:layout_weight="1" />

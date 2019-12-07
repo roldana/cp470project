@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculatrice Hypothécaire</string>
+    <string name="InputCheck">Veuillez Vérifier Vos Entrées</string>
+    <string name="paymentPlanTxt">Plan de Paiement</string>
+    <string name="mortgageAmtTxt">Montant du Prêt</string>
+    <string name="interestRateTxt">Taux d\'intérêt </string>
+    <string name="amortPeriodTxt">Période d\'amortissement</string>
+    <string name="termTxt">Terme</string>
+    <string name="paymentFreqTxt">Fréquence des Paiements </string>
+    <string name="prepaymentPlanTxt">Remboursement anticipé</string>
+    <string name="prepaymentAmountTxt">Montant des Remboursements Anticipés</string>
+    <string name="startWithPayTxt">À partir du Versement</string>
+    <string name="calculateBtnTxt">Calculer</string>
+    <string name="periodActResult">Période</string>
+    <string name="principalPaymentActResult">Remboursement du Principal</string>
+    <string name="interestPaymentActResult">Versement d\'intérêt</string>
+    <string name="totalPaymentActResult">Total des Versements</string>
+    <string name="endingBalActResult">Solde de Clôture</string>
+    <string name="calcSummaryTxt">Aperçu des Calculs</string>
+    <string name="tableCategoryTxt">Catégorie</string>
+    <string name="tableTermTxt">Terme</string>
+    <string name="tableAmortP">Période d\'amortissement</string>
+    <string name="tableNumOfPaymentsTxt">Nombre de Versements</string>
+    <string name="tableMortgagePaymentTxt">Versement Hypothécaire</string>
+    <string name="tablePrepaymentTxt">Remboursement Anticipé</string>
+    <string name="tablePrinciplePaymentsTxt">Paiement de Capital</string>
+    <string name="tableInterestPaymentsTxt">Paiement de Frais d\'intérêt</string>
+    <string name="tableTotalCostTxt">Coût total</string>
+    <string name="summaryMortgageTxt">Aperçu du prêt hypothécaire</string>
+    <string name="summaryMortgageTxt2">Au cours de la période d\'amortissement de 25 ans, vous aurez :</string>
+    <string name="summaryMortgageTxt3"></string> //testing purposes
+    <string name="summaryMortgageTxt4">Au cours du terme de 5 ans, vous aurez :</string>
+    <string name="summaryMortgageTxt5"></string> //testing purposes
+    <string name="summaryMortgageTxt6">À la fin du terme de 5 ans, vous aurez :</string>
+    <string name="summaryPaymentDiagTxt">Schéma de Versements</string>
+    <string name="summaryReportBtnTxt">Rapport Sommaire</string>
+    <string name="summaryReportDescTxt">Un rapport sommaire peut être produit basé sur les données que vous avez entrées dans la calculatrice. Le rapport inclut toutes vos données, résultats et calendrier des versements (annuel et par période).</string>
+</resources>

@@ -1,3 +1,39 @@
 <resources>
     <string name="app_name">Mortgage Calculator</string>
+    <string name="InputCheck">Please Check Inputs</string>
+    <string name="paymentPlanTxt">Payment Plan</string>
+    <string name="mortgageAmtTxt">Mortgage Amount</string>
+    <string name="interestRateTxt">Interest Rate</string>
+    <string name="amortPeriodTxt">Amortization Period</string>
+    <string name="termTxt">Term</string>
+    <string name="paymentFreqTxt">Payment Frequency</string>
+    <string name="prepaymentPlanTxt">Prepayment Plan</string>
+    <string name="prepaymentAmountTxt">Prepayment Amount</string>
+    <string name="startWithPayTxt">Start with payment</string>
+    <string name="calculateBtnTxt">Calculate</string>
+    <string name="periodActResult">Period</string>
+    <string name="principalPaymentActResult">Principal Payment</string>
+    <string name="interestPaymentActResult">Interest Payment</string>
+    <string name="totalPaymentActResult">Total Payment</string>
+    <string name="endingBalActResult">Ending Balance</string>
+    <string name="calcSummaryTxt">Calculation Summary</string>
+    <string name="tableCategoryTxt">Category</string>
+    <string name="tableTermTxt">Term</string>
+    <string name="tableAmortP">Amort. Period</string>
+    <string name="tableNumOfPaymentsTxt">Num of Payments</string>
+    <string name="tableMortgagePaymentTxt">Mortgage Payment</string>
+    <string name="tablePrepaymentTxt">Prepayment</string>
+    <string name="tablePrinciplePaymentsTxt">Principle Payments</string>
+    <string name="tableInterestPaymentsTxt">Interest Payments</string>
+    <string name="tableTotalCostTxt">Total Cost</string>
+    <string name="summaryMortgageTxt">Mortgage Summary</string>
+    <string name="summaryMortgageTxt2">Over the 25-year amortization period, you will:</string>
+    <string name="summaryMortgageTxt3"></string> //testing purposes
+    <string name="summaryMortgageTxt4">Over the 5-year term, you will:</string>
+    <string name="summaryMortgageTxt5"></string> //testing purposes
+    <string name="summaryMortgageTxt6">At the end of your 5-year term, you will:</string>
+    <string name="summaryPaymentDiagTxt">Payment Diagram</string>
+    <string name="summaryReportBtnTxt">Go to Summary Report</string>
+    <string name="summaryReportDescTxt">A Summary Report can be produced based on values you entered into the calculator. This report includes all your data, calculation results and payment schedule (by year and by period).</string>
+
 </resources>

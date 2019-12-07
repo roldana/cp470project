@@ -101,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
                     database.insert(dbHelper.TABLE_NAME, null, cValues);
                     startActivity(intent);
                 } else {
-                    CharSequence text = "Please check inputs";
+                    //CharSequence text = "Please Check Inputs";
+                    String text = MainActivity.this.getResources().getString(R.string.InputCheck);
                     int duration = Toast.LENGTH_SHORT;
                     Toast toast = Toast.makeText(getApplicationContext(), text, duration);
                     toast.show();
