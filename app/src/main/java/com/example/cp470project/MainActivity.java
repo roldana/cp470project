@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
                 R.array.payment_freq, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         paymentFreqSpn.setAdapter(adapter);
-        paymentFreqSpn.setSelection(5);
 
         //set dropdown menu for the term length (years)
         adapter = ArrayAdapter.createFromResource(this,
