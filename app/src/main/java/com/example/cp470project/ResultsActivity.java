@@ -93,7 +93,7 @@ public class ResultsActivity extends AppCompatActivity {
         Double monthlyInterestRate = interestRate * 0.01 / 12;
 
         Boolean monthlyPay = true;
-        if (paymentFreq != "month") {
+        if (paymentFreq.equals("bi_weekly")) {
             monthlyPay = false;
         }
 
