@@ -137,25 +137,25 @@ public class ResultsActivity extends AppCompatActivity {
         totalPeriodTxt.setText(txt);
 
         // set text for mortgage summary section
-        txt = String.format("Over the %d-year amortization period, you will:", amortizationPeriodY);
+        txt = String.format(ResultsActivity.this.getString(R.string.summaryMortgageTxt2), amortizationPeriodY);
         mortgageSummaryTxt0.setText(txt);
         if (monthlyPay) {
-            txt = String.format("Have made %d monthly (12x per year) payments of $%,.2f. Have paid $%,.2f in principal, $%,.2f in interest, for a total of $%,.2f.", totalMonths, monthlyPayments, mortgageAmount, interestPaid, totalPaid);
+            txt = String.format(ResultsActivity.this.getString(R.string.summaryMortgageTxt3), totalMonths, monthlyPayments, mortgageAmount, interestPaid, totalPaid);
         } else {
-            txt = String.format("Have made %d bi-weekly (every two weeks) payments of $%,.2f. Have paid $%,.2f in principal, $%,.2f in interest, for a total of $%,.2f.", amortizationPeriodY*26, (monthlyPayments*12)/26, mortgageAmount, interestPaid, totalPaid);
+            txt = String.format(ResultsActivity.this.getString(R.string.summaryMortgageTxt7), amortizationPeriodY*26, (monthlyPayments*12)/26, mortgageAmount, interestPaid, totalPaid);
         }
         mortgageSummaryTxt1.setText(txt);
-        txt = String.format("Over the %d-year term, you will", termYrs);
+        txt = String.format(ResultsActivity.this.getString(R.string.summaryMortgageTxt4), termYrs);
         mortgageSummaryTxt2.setText(txt);
         if (monthlyPay) {
-            txt = String.format("Have made %d monthly (12x per year) payments of $%,.2f. Have paid $%,.2f in principal, $%,.2f in interest, for a total of $%,.2f.", termMonths, monthlyPayments, principalPaidTerm, interestPaidTerm, totalPaidTerm);
+            txt = String.format(ResultsActivity.this.getString(R.string.summaryMortgageTxt5), termMonths, monthlyPayments, principalPaidTerm, interestPaidTerm, totalPaidTerm);
         } else {
-            txt = String.format("Have made %d bi-weekly (every two weeks) payments of $%,.2f. Have paid $%,.2f in principal, $%,.2f in interest, for a total of $%,.2f.", termYrs*26, (monthlyPayments*12)/26, principalPaidTerm, interestPaidTerm, totalPaidTerm);
+            txt = String.format(ResultsActivity.this.getString(R.string.summaryMortgageTxt7), termYrs*26, (monthlyPayments*12)/26, principalPaidTerm, interestPaidTerm, totalPaidTerm);
         }
         mortgageSummaryTxt3.setText(txt);
-        txt = String.format("At the end of your %d-year term, you will:", termYrs);
+        txt = String.format(ResultsActivity.this.getString(R.string.summaryMortgageTxt6), termYrs);
         mortgageSummaryTxt4.setText(txt);
-        txt = String.format("Have a balance of $%,.2f", balanceTerm);
+        txt = String.format(ResultsActivity.this.getString(R.string.summaryMortgageTxt8), balanceTerm);
         mortgageSummaryTxt5.setText(txt);
 
     }
