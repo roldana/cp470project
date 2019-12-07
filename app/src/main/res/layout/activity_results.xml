@@ -45,78 +45,54 @@
 
             <TextView android:text="@string/tableNumOfPaymentsTxt" />
 
-            <TextView
-                android:id="@+id/num_pay_term"
-                android:text="60" />
+            <TextView android:id="@+id/num_pay_term" />
 
-            <TextView
-                android:id="@+id/num_pay_period"
-                android:text="300" />
+            <TextView android:id="@+id/num_pay_period" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="@string/tableMortgagePaymentTxt" />
 
-            <TextView
-                android:id="@+id/monthly_payment_term"
-                android:text="$581.00" />
+            <TextView android:id="@+id/monthly_payment_term" />
 
-            <TextView
-                android:id="@+id/monthly_payment_period"
-                android:text="$581.00" />
+            <TextView android:id="@+id/monthly_payment_period" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="@string/tablePrepaymentTxt" />
 
-            <TextView
-                android:id="@+id/prepay_term"
-                android:text="$0.00" />
+            <TextView android:id="@+id/prepay_term" />
 
-            <TextView
-                android:id="@+id/prepay_period"
-                android:text="$0.00" />
+            <TextView android:id="@+id/prepay_period" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="@string/tablePrinciplePaymentsTxt" />
 
-            <TextView
-                android:id="@+id/principle_payments_term"
-                android:text="$11500.00 " />
+            <TextView android:id="@+id/principle_payments_term" />
 
-            <TextView
-                android:id="@+id/principle_payments_period"
-                android:text="$100000.00" />
+            <TextView android:id="@+id/principle_payments_period" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="@string/tableInterestPaymentsTxt" />
 
-            <TextView
-                android:id="@+id/interest_payments_term"
-                android:text="$23403.00" />
+            <TextView android:id="@+id/interest_payments_term" />
 
-            <TextView
-                android:id="@+id/interest_payments_period"
-                android:text="$74481.50" />
+            <TextView android:id="@+id/interest_payments_period" />
         </TableRow>
 
         <TableRow>
 
             <TextView android:text="@string/tableTotalCostTxt" />
 
-            <TextView
-                android:id="@+id/total_term"
-                android:text="$34903.00" />
+            <TextView android:id="@+id/total_term" />
 
-            <TextView
-                android:id="@+id/total_period"
-                android:text="$174481.50" />
+            <TextView android:id="@+id/total_period" />
         </TableRow>
 
     </TableLayout>
@@ -135,7 +111,6 @@
         android:id="@+id/mortgage_summary_txt0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/summaryMortgageTxt2"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt" />
@@ -144,7 +119,6 @@
         android:id="@+id/mortgage_summary_txt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="have made 300 monthly (12x per year) payments of $581.60. have paid $100,000.00 in principal, $74,481.50 in interest, for a total of $174,481.50."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt0" />
 
@@ -153,7 +127,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/summaryMortgageTxt4"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt1" />
@@ -162,7 +135,6 @@
         android:id="@+id/mortgage_summary_txt3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="have made 60 monthly (12x per year) payments of $581.60. have paid $11,492.50 in principal, $23,403.80 in interest, for a total of $34,896.30."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt2" />
 
@@ -171,7 +143,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/summaryMortgageTxt6"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt3" />
@@ -180,7 +151,6 @@
         android:id="@+id/mortgage_summary_txt5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="have a balance of $88,507.50."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt4" />
 

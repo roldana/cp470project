@@ -121,8 +121,8 @@ public class ResultsActivity extends AppCompatActivity {
         monthlyPaymentTermTxt.setText(txt);
         monthlyPaymentPeriodTxt.setText(txt);
         txt = String.format("$%,.2f", prepaymentAmount);
-//        prepayTermTxt.setText(txt);
-//        prepayPeriodTxt.setText(txt);
+        prepayTermTxt.setText(txt);
+        prepayPeriodTxt.setText(txt);
         txt = String.format("$%,.2f", principalPaidTerm);
         principlePaymentsTermTxt.setText(txt);
         txt = String.format("$%,.2f", mortgageAmount);

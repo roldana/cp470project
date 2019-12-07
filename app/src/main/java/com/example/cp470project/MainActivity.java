@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
         } else { valid = false; }
 
         // prepayment amount
-        String prepaymentAmountInput = interestRateTxt.getText().toString();
+        String prepaymentAmountInput = prepayAmountTxt.getText().toString();
         if (!prepaymentAmountInput.isEmpty()) {
             try {
                 prepaymentAmount = Double.parseDouble(prepaymentAmountInput);
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         } else { prepaymentAmount = 0.0; }
 
         //start with payment
-        String startWithPaymentInput = interestRateTxt.getText().toString();
+        String startWithPaymentInput = startWithTxt.getText().toString();
         if (!startWithPaymentInput.isEmpty()) {
             try {
                 startWithPayment = Integer.parseInt(startWithPaymentInput);
