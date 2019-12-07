@@ -11,7 +11,7 @@
         android:id="@+id/calc_summary_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculation Summary"
+        android:text="@string/calcSummaryTxt"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,21 +29,21 @@
         <TableRow>
 
             <TextView
-                android:text="Category"
+                android:text="@string/tableCategoryTxt"
                 android:textStyle="bold" />
 
             <TextView
-                android:text="Term"
+                android:text="@string/tableTermTxt"
                 android:textStyle="bold" />
 
             <TextView
-                android:text="Amort. Period"
+                android:text="@string/tableAmortP"
                 android:textStyle="bold" />
         </TableRow>
 
         <TableRow>
 
-            <TextView android:text="Num of Payments" />
+            <TextView android:text="@string/tableNumOfPaymentsTxt" />
 
             <TextView
                 android:id="@+id/num_pay_term"
@@ -56,7 +56,7 @@
 
         <TableRow>
 
-            <TextView android:text="Mortgage Payment" />
+            <TextView android:text="@string/tableMortgagePaymentTxt" />
 
             <TextView
                 android:id="@+id/monthly_payment_term"
@@ -69,7 +69,7 @@
 
         <TableRow>
 
-            <TextView android:text="Prepayment" />
+            <TextView android:text="@string/tablePrepaymentTxt" />
 
             <TextView
                 android:id="@+id/prepay_term"
@@ -82,7 +82,7 @@
 
         <TableRow>
 
-            <TextView android:text="Principle Payments" />
+            <TextView android:text="@string/tablePrinciplePaymentsTxt" />
 
             <TextView
                 android:id="@+id/principle_payments_term"
@@ -95,7 +95,7 @@
 
         <TableRow>
 
-            <TextView android:text="Interest Payments" />
+            <TextView android:text="@string/tableInterestPaymentsTxt" />
 
             <TextView
                 android:id="@+id/interest_payments_term"
@@ -108,7 +108,7 @@
 
         <TableRow>
 
-            <TextView android:text="Total Cost" />
+            <TextView android:text="@string/tableTotalCostTxt" />
 
             <TextView
                 android:id="@+id/total_term"
@@ -126,7 +126,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Mortgage Summary"
+        android:text="@string/summaryMortgageTxt"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculations_table_layout" />
@@ -135,7 +135,7 @@
         android:id="@+id/mortgage_summary_txt0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Over the 25-year amortization period, you will:"
+        android:text="@string/summaryMortgageTxt2"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt" />
@@ -153,7 +153,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Over the 5-year term, you will:"
+        android:text="@string/summaryMortgageTxt4"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt1" />
@@ -171,7 +171,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="At the end of your 5-year term, you will:"
+        android:text="@string/summaryMortgageTxt6"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt3" />
@@ -189,7 +189,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Payment Diagram"
+        android:text="@string/summaryPaymentDiagTxt"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mortgage_summary_txt5" />
@@ -208,7 +208,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Go to Summary Report"
+        android:text="@string/summaryReportBtnTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView63" />
@@ -218,7 +218,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="A Summary Report can be produced based on values you entered into the calculator. This report includes all your data, calculation results and payment schedule (by year and by period)."
+        android:text="@string/summaryReportDescTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView62" />
 
